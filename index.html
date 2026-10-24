@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ashlyn Garone — Product Designer</title>
+  <meta name="description" content="Product design portfolio of Ashlyn Garone.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Fraunces:opsz,wght@9..144,500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #faf9f7;
+      --surface: #ffffff;
+      --text: #1c1b1a;
+      --muted: #6b6762;
+      --line: #e7e4df;
+      --accent: #c2410c;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #141312;
+        --surface: #1d1c1a;
+        --text: #f2efea;
+        --muted: #a29d96;
+        --line: #2e2c29;
+        --accent: #fb923c;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font: 400 17px/1.6 Inter, system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+
+    header { padding: 28px 0; }
+    nav { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-weight: 600; text-decoration: none; }
+    nav ul { display: flex; gap: 24px; list-style: none; padding: 0; }
+    nav ul a { color: var(--muted); text-decoration: none; font-size: 15px; }
+    nav ul a:hover { color: var(--text); }
+
+    .hero { padding: 96px 0 80px; }
+    .hero h1 {
+      font: 500 clamp(40px, 7vw, 72px)/1.05 Fraunces, Georgia, serif;
+      letter-spacing: -0.02em;
+      max-width: 14ch;
+    }
+    .hero p { color: var(--muted); font-size: 20px; max-width: 38ch; margin-top: 24px; }
+
+    section { padding: 64px 0; border-top: 1px solid var(--line); }
+    h2 {
+      font-size: 13px; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 32px;
+    }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; }
+    .card {
+      background: var(--surface); border: 1px solid var(--line); border-radius: 16px;
+      overflow: hidden; text-decoration: none; transition: transform .2s ease;
+    }
+    .card:hover { transform: translateY(-4px); }
+    .thumb { aspect-ratio: 4 / 3; background: var(--line); }
+    .thumb.a { background: linear-gradient(135deg, #fde68a, #fb923c); }
+    .thumb.b { background: linear-gradient(135deg, #bfdbfe, #818cf8); }
+    .thumb.c { background: linear-gradient(135deg, #bbf7d0, #2dd4bf); }
+    .card-body { padding: 20px 22px 24px; }
+    .card h3 { font-size: 19px; font-weight: 600; }
+    .card p { color: var(--muted); font-size: 15px; margin-top: 4px; }
+
+    .about { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+    .about p + p { margin-top: 16px; }
+    .about ul { list-style: none; padding: 0; color: var(--muted); }
+    .about li { padding: 10px 0; border-bottom: 1px solid var(--line); }
+
+    .contact a.big {
+      font: 500 clamp(28px, 5vw, 44px)/1.2 Fraunces, Georgia, serif;
+      color: var(--accent); text-decoration: none;
+    }
+    .contact a.big:hover { text-decoration: underline; }
+    .links { display: flex; gap: 20px; margin-top: 20px; color: var(--muted); }
+
+    footer { padding: 40px 0; color: var(--muted); font-size: 14px; }
+
+    @media (max-width: 640px) {
+      .wrap { padding: 0 16px; }
+      nav ul { gap: 16px; }
+      .hero { padding: 56px 0 48px; }
+      .about { grid-template-columns: 1fr; gap: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <nav>
+      <a class="logo" href="/">Ashlyn Garone</a>
+      <ul>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <div class="hero">
+      <h1>Product designer crafting clear, human experiences.</h1>
+      <p>I design digital products that are simple to use and thoughtful in the details.</p>
+    </div>
+
+    <section id="work">
+      <h2>Selected work</h2>
+      <div class="grid">
+        <a class="card" href="#">
+          <div class="thumb a"></div>
+          <div class="card-body">
+            <h3>Project One</h3>
+            <p>Mobile app · UX research, interaction design</p>
+          </div>
+        </a>
+        <a class="card" href="#">
+          <div class="thumb b"></div>
+          <div class="card-body">
+            <h3>Project Two</h3>
+            <p>Web platform · Design systems</p>
+          </div>
+        </a>
+        <a class="card" href="#">
+          <div class="thumb c"></div>
+          <div class="card-body">
+            <h3>Project Three</h3>
+            <p>Dashboard · Product strategy, visual design</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <div class="about">
+        <div>
+          <p>Hi, I'm Ashlyn. I'm a product designer who loves turning messy problems into experiences that feel effortless.</p>
+          <p>Replace this with a few sentences about your background, how you work, and what you care about.</p>
+        </div>
+        <ul>
+          <li>User research &amp; testing</li>
+          <li>Interaction &amp; visual design</li>
+          <li>Prototyping in Figma</li>
+          <li>Design systems</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <a class="big" href="mailto:hello@example.com">hello@example.com</a>
+      <div class="links">
+        <a href="https://www.linkedin.com/">LinkedIn</a>
+        <a href="https://github.com/ashlyn-garone">GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">© 2026 Ashlyn Garone</footer>
+</body>
+</html>
